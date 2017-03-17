@@ -1,7 +1,18 @@
-import { BreedsComponent } from './breeds.component';
+import { BreedListComponent } from './breed-list';
+import { BreedViewComponent } from './breed-view';
 
 export const routes = [
-  { path: '', children: [
-    { path: '', component: BreedsComponent }
-  ]}
+  {
+      path: '',
+      children: [
+          {
+              path: '',
+              component: BreedListComponent
+          },
+          {
+              path: ':id',
+              component: BreedViewComponent
+          }
+      ]
+  }
 ];

@@ -15,4 +15,9 @@ export class BreedService {
             setTimeout(() => resolve(this.getItems()), 2000);
         });
     }
+
+    getItem(id: number | string) {
+        return this.getItems()
+            .then(items => items.find(item => item.id === +id));
+    }
 }

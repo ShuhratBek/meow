@@ -1,27 +1,27 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 import { SharedModule } from '../shared';
 
 import { routes } from './breeds.routes';
-import { BreedsComponent } from './breeds.component';
-import { BreedComponent } from './breed';
-import { BreedDialogComponent } from './breed-dialog';
+import { BreedListComponent, BreedItemComponent } from './breed-list';
+import { BreedViewComponent } from './breed-view';
 import { BreedService } from './breed.service';
 
 console.log('`Breed` bundle loaded asynchronously');
 
 @NgModule({
     declarations: [
-        BreedsComponent,
-        BreedComponent,
-        BreedDialogComponent
+        BreedListComponent,
+        BreedItemComponent,
+        BreedViewComponent
     ],
     imports: [
         RouterModule.forChild(routes),
-        SharedModule
+        SharedModule,
+        FormsModule
     ],
-    providers: [BreedService],
-    entryComponents: [BreedDialogComponent]
+    providers: [BreedService]
 })
 export class BreedsModule {
   public static routes = routes;
