@@ -5,19 +5,14 @@ import { BREEDS } from './mock-breeds';
 
 @Injectable()
 export class BreedService {
-    getItems(): Promise<Breed[]> {
-        return Promise.resolve(BREEDS);
-    }
+  getItems(): Promise<Breed[]> {
+    return Promise.resolve(BREEDS);
+  }
 
-    getItemsSlowly(): Promise<Breed[]> {
-        return new Promise(resolve => {
-            // Simulate server latency with 2 second delay
-            setTimeout(() => resolve(this.getItems()), 2000);
-        });
-    }
-
-    getItem(id: number | string) {
-        return this.getItems()
-            .then(items => items.find(item => item.id === +id));
-    }
+  getItem(id: number | string) {
+    return this.getItems()
+      .then(
+        items => items.find(item => item.id === +id)
+      );
+  }
 }

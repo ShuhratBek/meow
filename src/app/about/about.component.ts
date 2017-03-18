@@ -1,8 +1,15 @@
-import { Component } from '@angular/core';
+import {
+  Component,
+  OnInit
+} from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
-    selector: 'about',
-    styleUrls: ['./about.component.scss'],
-    templateUrl: './about.component.html'
+  selector: 'about',
+  styles: [`
+  `],
+  templateUrl: './about.component.html'
 })
-export class AboutComponent {}
+export class AboutComponent {
+
+}
