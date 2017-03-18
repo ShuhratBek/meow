@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 import { Breed } from '../breeds.model';
 import { BreedService } from '../breed.service';
 import 'rxjs/add/operator/switchMap';
-import { Observable } from 'rxjs/Observable';
 
 @Component({
     selector: 'breed-view',
@@ -15,8 +14,7 @@ export class BreedViewComponent implements OnInit {
         image: 'assets/img/breeds/American-Shorthair-2.jpg'
     };
 
-    constructor(private breedService: BreedService, private route: ActivatedRoute,
-    private router: Router) {
+    constructor(private breedService: BreedService, private route: ActivatedRoute) {
 
     }
 

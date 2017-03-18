@@ -9,7 +9,6 @@ import { Breed } from '../breeds.model'
 })
 export class BreedListComponent implements OnInit {
     items: Breed[];
-    selectedOption: string;
     search: string;
     selectedSize: string;
     sizes: string[] = [
